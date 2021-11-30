@@ -1,0 +1,25 @@
+.auth_container {
+  display: flex;
+  flex-direction: column;
+}
+.auth {
+  display: flex;
+  flex-direction: column;
+}
+.auth_header h5 {
+  background-color: #1a237e;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.auth_form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.auth_bottom {
+  text-align: center;
+  padding: 10px 20px;
+  color: #d12121;
+  font-weight: 700;
+}
