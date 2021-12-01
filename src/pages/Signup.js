@@ -1,6 +1,6 @@
 import { Button, Container, Paper, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-import Layout from "./Layout";
+import Lay from "./Lay";
 import { Link, Outlet } from "react-router-dom";
 import "./auth.css";
 const SignUp = () => {
@@ -11,7 +11,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Layout>
+      <Lay>
         <Container className="auth_container">
           <Paper className="auth">
             <div className="auth_header">
@@ -71,7 +71,7 @@ const SignUp = () => {
             </div>
           </Paper>
         </Container>
-      </Layout>
+      </Lay>
 
       <Outlet />
     </>

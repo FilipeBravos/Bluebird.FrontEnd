@@ -1,6 +1,6 @@
 import { Button, Container, Paper, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-import Layout from "./Layout";
+import Lay from "./Lay";
 import { Outlet } from "react-router-dom";
 import "./auth.css";
 const Cadastro = () => {
@@ -13,7 +13,7 @@ const Cadastro = () => {
 
   return (
     <>
-      <Layout>
+      <Lay>
         <Container className="auth_container">
           <Paper className="auth">
             <div className="auth_header">
@@ -79,7 +79,7 @@ const Cadastro = () => {
             </div>
           </Paper>
         </Container>
-      </Layout>
+      </Lay>
 
       <Outlet />
     </>

@@ -10,6 +10,7 @@ import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import { getToken } from "./pages/useToken";
+import Layout from "./Home/Layout";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element={<PrivateRoute />}>
           <Route path="" element={<Private />} />
           <Route path="cadastro" element={<Cadastro />} />
-          <Route path="home" element={<h1>Home</h1>} />
+          <Route path="home" element={<Layout />} />
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>

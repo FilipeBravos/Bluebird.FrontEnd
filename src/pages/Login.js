@@ -1,6 +1,6 @@
 import { Button, Container, Paper, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-import Layout from "./Layout";
+import Lay from "./Lay";
 import { Link, useNavigate } from "react-router-dom";
 import "./auth.css";
 import PropTypes from "prop-types";
@@ -34,7 +34,7 @@ const Login = () => {
     navigate("/home");
   };
   return (
-    <Layout>
+    <Lay>
       <Container className="auth_container">
         <Paper className="auth">
           <div className="auth_header">
@@ -81,7 +81,7 @@ const Login = () => {
           </div>
         </Paper>
       </Container>
-    </Layout>
+    </Lay>
   );
 };
 Login.propTypes = {
