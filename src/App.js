@@ -1,31 +1,38 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
   Navigate,
   Outlet,
 } from "react-router-dom";
-import SignUp from "./pages/Signup";
+//import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import { getToken } from "./pages/useToken";
 import Layout from "./Home/Layout";
+import Agenda from "./pages/Agenda";
+import Avaliação from "./pages/Avaliação";
+import Relatorio from "./pages/Relatorio";
 
+function Home() {
+  return <h1>Home</h1>;
+}
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<PrivateRoute />}>
-          <Route path="" element={<Private />} />
+        <Route path="/" element={<Layout />}>
+          {/* <Route path="/signup" element={<SignUp />} /> */}
+          <Route path="index" element={<Home />} />
           <Route path="cadastro" element={<Cadastro />} />
-          <Route path="home" element={<Layout />} />
+          <Route path="avaliação" element={<Avaliação />} />
+          <Route path="relatorio" element={<Relatorio />} />
+          <Route path="agenda" element={<Agenda />} />
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,26 @@
 import React from "react";
 import { Drawer, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import ItemMenuLateral from "./ItemMenuLateral";
 
-const MenuLateral = () => {
+const MenuLateral = (props) => {
   const classes = useStyles();
+
+  const criarIconesLaterais = (itens) =>
+    itens
+      .filter((item) => item.exibir)
+      .map((item, index) => {
+        return (
+          <Grid key={index} item>
+            <ItemMenuLateral
+              label={item.nome}
+              goTo={item.goTo}
+              icone={item.icone}
+              linkInterno={item.linkInterno}
+            />
+          </Grid>
+        );
+      });
 
   return (
     <Drawer
@@ -12,7 +29,7 @@ const MenuLateral = () => {
       classes={{ paper: classes.drawerPaper }}
       anchor="left"
     >
-      <Grid container></Grid>
+      <Grid container> {criarIconesLaterais(props.itens)}</Grid>
     </Drawer>
   );
 };

@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import Cabecalho from "./components/Cabecalho";
 import MenuLateral from "./components/MenuLateral";
+import { menu } from "./Menu";
+import { Outlet } from "react-router";
 
 const Layout = () => {
   const classes = useStyles();
@@ -10,7 +12,8 @@ const Layout = () => {
     <React.Fragment>
       <div className={classes.global}>
         <Cabecalho />
-        <MenuLateral />
+        <MenuLateral itens={menu()} />
+        <Outlet />
       </div>
     </React.Fragment>
   );
