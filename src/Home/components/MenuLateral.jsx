@@ -2,7 +2,7 @@ import React from "react";
 import { Drawer, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ItemMenuLateral from "./ItemMenuLateral";
-
+import Logo from "../../logo/logo";
 const MenuLateral = (props) => {
   const classes = useStyles();
 
@@ -23,14 +23,17 @@ const MenuLateral = (props) => {
       });
 
   return (
-    <Drawer
-      className={classes.drawer}
-      variant="permanent"
-      classes={{ paper: classes.drawerPaper }}
-      anchor="left"
-    >
-      <Grid container> {criarIconesLaterais(props.itens)}</Grid>
-    </Drawer>
+    <>
+      <Logo />
+      <Drawer
+        className={classes.drawer}
+        variant="permanent"
+        classes={{ paper: classes.drawerPaper }}
+        anchor="left"
+      >
+        <Grid container> {criarIconesLaterais(props.itens)}</Grid>
+      </Drawer>
+    </>
   );
 };
 
@@ -38,10 +41,12 @@ const drawerWidth = 81;
 const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
+
     flexShrink: 0,
   },
   drawerPaper: {
     width: drawerWidth,
+    marginTop: "62px",
     backgroundColor: "#20174A",
   },
   toolbar: theme.mixins.toolbar,

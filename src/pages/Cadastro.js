@@ -24,42 +24,36 @@ const Cadastro = () => {
                 <TextField
                   value={nome}
                   type="text"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setNome(e.target.value)}
                   label="insira o nome da criança"
                 />
                 <TextField
                   value={idade}
                   type="number"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setIdade(e.target.value)}
                   label="Insira a idade da criança"
                 />
                 <TextField
                   value={nomePai}
                   type="text"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setNomePai(e.target.value)}
                   label="Insira o nome do pai da criança"
                 />
                 <TextField
                   value={nomeMae}
                   type="text"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setNomeMae(e.target.value)}
                   label="Insira o nome da mãe da criança"
                 />
                 <TextField
                   value={convenio}
                   type="text"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setConvenio(e.target.value)}
                   label="Insira o plano de saúde"
                 />
                 <TextField
                   value={celularResp}
                   type="text"
-                  style={{ margin: "5px 0px" }}
                   onChange={(e) => setCelularResp(e.target.value)}
                   label="Insira o número do celular do responsável pela criança"
                 />
